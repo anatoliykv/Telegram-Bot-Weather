@@ -5,7 +5,7 @@ from telebot import types
 from bs4 import BeautifulSoup as BS
 r = requests.get('https://sinoptik.ua')
 html = BS(r.content, 'html.parser')
-bot = telebot.TeleBot(1018264997:AAFuIQ9K78BqNyyKnN4PjS-2hA5PE8FcIb8)
+bot = telebot.TeleBot(telebot.token)
 
 for city in html.select('#header'):
     cur_city = city.select('.cityName .isMain')[0].text
